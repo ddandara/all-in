@@ -1,0 +1,205 @@
+#Faça a implementação do seu diagrama de classes completo na linguagem python.
+#Faça a simulação de um pedido utilizando o programa. Utilize um menu para a navegação.
+#Utilize o comando input para pedir dados do usuário durante o programa.
+
+
+#Discente: Denise Dandara Gomes de Carvalho Severo.
+#2º ano de Informática Matutino.
+#Programação Orientada a Objetos
+
+from delivery import *
+from compra import *
+from perfil import *
+from sopa import *
+
+perfil=Perfil()
+comprinha=Compra()
+sopa=Sopa()
+
+
+comprinha.comprar(perfil,sopa)
+#exibindo o verificar compra da nossa compra1
+print(comprinha.ver_compra())
+
+
+class Carrinho:
+    def __init__(self):
+        self.sopas = []
+
+    def Inserir_Sopa(self, Sopa):
+        self.sopas.append(Sopa)
+
+    def lista_Sopas(self):
+        for Sopa in self.sopas:
+            print(Sopa.nome, Sopa.preco)
+
+
+
+
+    def soma_total(self):
+      total = 0
+      for Sopa in self.sopas:
+        total += Sopa.preco
+      return
+
+from sopa import *
+from perfil import *
+class Compra:
+    def __init__(self):
+        self._perfil=None
+        self._sopa=None
+
+    def comprar(self):
+        self._perfil=perfil
+        self._sopa=sopa
+
+    def ver_compra(self):
+        print ("Você comprou uma sopa "+self._sopa.nome)
+
+
+class Delivery:
+
+    def __init__(self, contato, unidades, servicos, catalogo, regiao, sopas):
+        self.contato = contato
+        self.unidades = unidades
+        self.servicos = servicos
+        self.catalogo = catalogo
+        self.regiao = regiao
+        self.sopas = sopas
+
+    def mostrar_contato(self):
+      print(self.contato)
+    def mostrar_unidades(self):
+      print(self.unidades)
+    def mostrar_servicos(self):
+      print(self.servicos)
+    def mostrar_catalogo(self):
+      print(self.catalogo)
+    def mostrar_regiao(self):
+      print(self.regiao)
+    def mostrar_sopas(self):
+      print(self.sopas)
+
+
+deli = Delivery ('GODS MENU SOPARIA - Contato:40028922', 'Unidades: Av Calama e Zona Sul', 'Entrega em domicílio e take out', 'Sopas Variadas', 'Entrega em todas as zonas', 'Sopas: Matryoshka, Hellevator, Chronosaurus e WOW-------------------------------------------------------------')
+deli.mostrar_contato()
+deli.mostrar_unidades()
+deli.mostrar_servicos()
+deli.mostrar_regiao()
+deli.mostrar_sopas()
+
+from compra import *
+class Perfil:
+    def __init__(self):
+        self.name=input("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Primeiramente, qual o seu nome? ")
+        self.login=input("Crie um nome de login: ")
+        self.telefone=input("Nos informe seu número de telefone atual: ")
+        self.endereco=input("Insira o logradouro nº da casa e bairro: ")
+        self.data_nasc=input("Insira sua data de nascimento: ")
+        self.cpf=input("Estamos quase finalizando, insira seu cpf: ")
+        self.email=input("Digite um endereço de email válido: ")
+        self.senha=input("Crie uma senha de no mínimo 8 caracteres, com ao menos uma letra e um número: ")
+
+    def consultperfil(self):
+        return self.name
+
+    def consultaNome(self):
+        return self.name 
+
+from carrinho import *
+from compra import *
+class Sopa:
+
+    def __init__(self, nn, preco, sabor, acompanhamento, qnt):
+        self.nome = input("Qual sopa da casa você deseja? ")
+        self.nn = nn
+        self.preco = preco
+        self.sabor = sabor
+        self.acompanhamento = acompanhamento
+        self.qnt = qnt
+
+
+    def mostrar_preco(self):
+        print(self.preco)
+
+    def mostrar_sabor(self):
+        print(self.sabor)
+
+    def mostrar_acompanhamento(self):
+        print(self.acompanhamento)
+
+    def mostrar_qnt(self):
+        print(self.qnt)
+
+    def mostrar_nn(self):
+        print(self.nn, "->Esse foi o prato escolhido")
+        
+
+
+    def mostrar_sopa(self):
+        if(nome=="Matryoshka"):
+          print(self.soup1)
+
+        elif(nome=="Hellevator"):
+          print(self.soup2)
+
+        elif(nome=="Chronosaurus"):
+          print(self.soup3)
+
+        elif(nome=="WOW"):
+          print(self.soup4)
+
+        else: 
+          print("Sopa não disponível")
+
+class Legumes(Sopa):
+    def __init__(self, nn, preco, sabor, acompanhamento, qnt, tpnoodle, tpverdura):
+        Sopa.__init__(self, nn, preco, sabor, acompanhamento, qnt)
+        self.tpnoodle = tpnoodle
+        self.tpverdura = tpverdura
+
+    def mostrar_tpnoodle(self):
+        print(self.tpnoodle)
+
+    def mostrar_tpverdura(self):
+        print(self.tpverdura)
+
+    def verificar_disponibilidade(self):
+        print(self.nome, "Esse prato está disponível")
+
+
+class Carne(Sopa):
+    def __init__(self, nn, preco, sabor, acompanhamento, qnt, tparroz, tpcarne):
+        Sopa.__init__(self, nn, preco, sabor, acompanhamento, qnt)
+        self.tparroz = tparroz
+        self.tpcarne = tpcarne
+
+    def mostrar_tparroz(self):
+        print(self.tparroz)
+
+    def mostrar_tpcarne(self):
+        print(self.tpcarne)
+
+    def verificar_disponibilidade(self):
+        print(self.nome, "Esse prato está disponível")
+
+
+class Carnecomlegumes(Legumes, Carne):
+    def __init__(self, nn, preco, sabor, acompanhamento, qnt, tpnoodle, tpverdura, tparroz, tpcarne, tptorrada):
+        Legumes.__init__(self, nome, preco, sabor, acompanhamento, qnt, tpnoodle, tpverdura)
+        Carne.__init__(self, nome, preco, sabor, acompanhamento, qnt, tparroz, tpcarne)
+        self.tptorrada = tptorrada
+
+    def mostrar_tptorrada(self):
+        print(self.tptorrada)
+
+
+soup2 = Carne("Hellevator", 15, "sabor: carne picante", "acompanhamento: Bruschetta", 1, "arroz cateto", "carne bovina")
+soup2.mostrar_nn()
+soup2.mostrar_sabor()
+soup2.mostrar_qnt()
+soup2.mostrar_preco()
+soup2.mostrar_acompanhamento()
+soup2.mostrar_tparroz()
+soup2.mostrar_tpcarne()
+
