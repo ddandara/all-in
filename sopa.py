@@ -77,21 +77,15 @@ class Carne(Sopa):
         print(self.nome, "Esse prato está disponível")
 
 
-class Carnecomlegumes(Legumes, Carne):
-    def __init__(self, nn, preco, sabor, acompanhamento, qnt, tpnoodle, tpverdura, tparroz, tpcarne, tptorrada):
-        Legumes.__init__(self, nome, preco, sabor, acompanhamento, qnt, tpnoodle, tpverdura)
-        Carne.__init__(self, nome, preco, sabor, acompanhamento, qnt, tparroz, tpcarne)
-        self.tptorrada = tptorrada
 
-    def mostrar_tptorrada(self):
-        print(self.tptorrada)
+Matryoshka("Carne", 15, "sabor: caldo de frango", "acompanhamento: batata", 1, "arroz branco",
+              "carne de frango")
 
 
-soup2 = Carne("Hellevator", 15, "sabor: carne picante", "acompanhamento: Bruschetta", 1, "arroz cateto", "carne bovina")
-soup2.mostrar_nn()
-soup2.mostrar_sabor()
-soup2.mostrar_qnt()
-soup2.mostrar_preco()
-soup2.mostrar_acompanhamento()
-soup2.mostrar_tparroz()
-soup2.mostrar_tpcarne()
+Chronosaurus("Legumes", 18, "sabor: legumes ao molho de feijão", "acompanhamento: bacon", 1,
+                "macarrão talharim", "ervilha")
+
+WOW("Legumes", 16, "sabor: Legumes variados", "acompanhamento: bacon e croutons", 1, "macarrão parafuso",
+                "repolho")
+
+Hellevator("Carne", 15, "sabor: carne picante", "acompanhamento: Bruschetta", 1, "arroz cateto", "carne bovina")
