@@ -7,16 +7,15 @@
 #2º ano de Informática Matutino.
 #Programação Orientada a Objetos
 
-from delivery import *
-from compra import *
-from perfil import *
-from sopa import *
+from delivery import*
+from perfil import*
+from sopa import*
+from compra import*
 
 perfil=Perfil()
-comprinha=Compra()
+comp=Compra()
 sopa=Sopa()
 
-
-comprinha.comprar(perfil,sopa)
+comp.comprar(perfil,sopa)
 #exibindo o verificar compra da nossa compra1
-print(comprinha.ver_compra())
+print(comp.ver_compra())

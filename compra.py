@@ -1,13 +1,14 @@
-from sopa import *
-from perfil import *
+from perfil import*
+from sopa import*
+
 class Compra:
     def __init__(self):
         self._perfil=None
         self._sopa=None
 
-    def comprar(self):
+    def comprar(self,perfil, sopa):
         self._perfil=perfil
-        self._sopa=sopa
+        self._sopa=Sopa
 
-    def ver_compra(self):
-        print ("Você comprou uma sopa "+self._sopa.nome)
+    def confirm_compra(self):
+        return self._perfil.name+" comprou "+self._produto._nome

@@ -1,16 +1,28 @@
-from carrinho import *
-from compra import *
-
 class Sopa:
 
-    def __init__(self, nn, preco, sabor, acompanhamento, qnt):
-        self.nome = input("Qual sopa da casa você deseja? ")
+    def __init__(self, nn, preco, sabor, acompanhamento):
+        self.nome=input("Qual sopa da casa você deseja?")
         self.nn = nn
         self.preco = preco
         self.sabor = sabor
         self.acompanhamento = acompanhamento
-        self.qnt = qnt
 
+
+    def mostrar_sopa(self):
+        if(nome=="Matryoshka"):
+          print(soup1.items())
+
+    def mostrar_sopa2(self):
+        if(nome=="Hellevator"):
+          print(soup2.items())
+
+    def mostrar_sopa3(self):
+        if(nome=="Chronosaurus"):
+          print(soup3.items())
+          
+    def mostrar_sopa4(self):
+        if(nome=="WOW"):
+          print(soup4.items())
 
     def mostrar_preco(self):
         print(self.preco)
@@ -21,33 +33,13 @@ class Sopa:
     def mostrar_acompanhamento(self):
         print(self.acompanhamento)
 
-    def mostrar_qnt(self):
-        print(self.qnt)
-
     def mostrar_nn(self):
         print(self.nn, "->Esse foi o prato escolhido")
-        
 
-
-    def mostrar_sopa(self):
-        if(nome=="Matryoshka"):
-          print(self.soup1)
-
-        elif(nome=="Hellevator"):
-          print(self.soup2)
-
-        elif(nome=="Chronosaurus"):
-          print(self.soup3)
-
-        elif(nome=="WOW"):
-          print(self.soup4)
-
-        else: 
-          print("Sopa não disponível")
 
 class Legumes(Sopa):
-    def __init__(self, nn, preco, sabor, acompanhamento, qnt, tpnoodle, tpverdura):
-        Sopa.__init__(self, nn, preco, sabor, acompanhamento, qnt)
+    def __init__(self, nome, preço, sabor, acompanhamento, tpnoodle, tpverdura):
+        Sopa.__init__(self, nome, preço, sabor, acompanhamento)
         self.tpnoodle = tpnoodle
         self.tpverdura = tpverdura
 
@@ -62,8 +54,8 @@ class Legumes(Sopa):
 
 
 class Carne(Sopa):
-    def __init__(self, nn, preco, sabor, acompanhamento, qnt, tparroz, tpcarne):
-        Sopa.__init__(self, nn, preco, sabor, acompanhamento, qnt)
+    def __init__(self, nome, preço, sabor, acompanhamento,tparroz, tpcarne):
+        Sopa.__init__(self, nome, preço, sabor, acompanhamento)
         self.tparroz = tparroz
         self.tpcarne = tpcarne
 
@@ -77,15 +69,14 @@ class Carne(Sopa):
         print(self.nome, "Esse prato está disponível")
 
 
+soup1=dict()
+soup1= {'nome':'Matryoshka', 'preço': 15, 'sabor': 'caldo de frango', 'acompanhamento': 'batata','tparroz': 'arroz branco', 'tpcarne': 'carne de frango'}
 
-Matryoshka("Carne", 15, "sabor: caldo de frango", "acompanhamento: batata", 1, "arroz branco",
-              "carne de frango")
+soup2=dict()
+soup2 = {'nome':'Hellevator', 'preço': 17, 'sabor': 'carne picante', 'acompanhamento': 'Bruschetta', 'tparroz': 'arroz cateto', 'tpcarne':'carne bovina'}
 
+soup3=dict()
+soup3 = {'nome':'Chronosaurus', 'preço': 18, 'sabor': 'legumes ao molho de feijão', 'acompanhamento': 'bacon', 'tpnoodle': 'macarrão talharim', 'tpverdura':'ervilha'}
 
-Chronosaurus("Legumes", 18, "sabor: legumes ao molho de feijão", "acompanhamento: bacon", 1,
-                "macarrão talharim", "ervilha")
-
-WOW("Legumes", 16, "sabor: Legumes variados", "acompanhamento: bacon e croutons", 1, "macarrão parafuso",
-                "repolho")
-
-Hellevator("Carne", 15, "sabor: carne picante", "acompanhamento: Bruschetta", 1, "arroz cateto", "carne bovina")
+soup4=dict()
+soup4 = {'nome':'WOW', 'preço': 16, 'sabor': 'Legumes variados', 'acompanhamento': 'bacon e croutons', 'tpnoodle':'macarrão parafuso', 'tpverdura':'repolho'}

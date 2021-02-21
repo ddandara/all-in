@@ -1,6 +1,5 @@
 
 class Delivery:
-
     def __init__(self, contato, unidades, servicos, catalogo, regiao, sopas):
         self.contato = contato
         self.unidades = unidades
@@ -29,3 +28,4 @@ deli.mostrar_unidades()
 deli.mostrar_servicos()
 deli.mostrar_regiao()
 deli.mostrar_sopas()
+
