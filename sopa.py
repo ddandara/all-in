@@ -1,40 +1,81 @@
 class Sopa:
 
-    def __init__(self, nn, preco, sabor, acompanhamento):
+    def __init__(self, nn=None, preco=None, sabor=None, acompanhamento=None):
         self.nome=input("Qual sopa da casa você deseja?")
         self.nn = nn
         self.preco = preco
         self.sabor = sabor
         self.acompanhamento = acompanhamento
 
-
+    
     def mostrar_sopa(self):
-        if(nome=="Matryoshka"):
-          print(soup1.items())
+        if(self.nome=="Matryoshka"):
+          print(soup1)
 
-    def mostrar_sopa2(self):
-        if(nome=="Hellevator"):
-          print(soup2.items())
+        elif(self.nome=="Hellevator"):
+          print(soup2)
 
-    def mostrar_sopa3(self):
-        if(nome=="Chronosaurus"):
-          print(soup3.items())
+        elif(self.nome=="Chronosaurus"):
+          print(soup3)
           
-    def mostrar_sopa4(self):
-        if(nome=="WOW"):
-          print(soup4.items())
+        elif(self.nome=="WOW"):
+          print(soup4)
+
+        else:
+          print("teste")
 
     def mostrar_preco(self):
-        print(self.preco)
+      if(self.nome=="Matryoshka"):
+        print(soup1["preço"])
+
+      elif(self.nome=="Hellevator"):
+        print(soup2["preço"])
+
+      elif(self.nome=="Chronosaurus"):
+        print(soup3["preço"])
+          
+      elif(self.nome=="WOW"):
+        print(soup4["preço"])
+
 
     def mostrar_sabor(self):
-        print(self.sabor)
+      if(self.nome=="Matryoshka"):
+        print(soup1["sabor"])
+
+      elif(self.nome=="Hellevator"):
+        print(soup2["sabor"])
+
+      elif(self.nome=="Chronosaurus"):
+        print(soup3["sabor"])
+          
+      elif(self.nome=="WOW"):
+        print(soup4["sabor"])
 
     def mostrar_acompanhamento(self):
-        print(self.acompanhamento)
+      if(self.nome=="Matryoshka"):
+        print(soup1["acampanhamento"])
+
+      elif(self.nome=="Hellevator"):
+        print(soup2["acompanhamento"])
+
+      elif(self.nome=="Chronosaurus"):
+        print(soup3["acampanhamento"])
+          
+      elif(self.nome=="WOW"):
+        print(soup4["acompanhamento"])
 
     def mostrar_nn(self):
-        print(self.nn, "->Esse foi o prato escolhido")
+      if(self.nome=="Matryoshka"):
+        print(soup1["nome"])
+
+      elif(self.nome=="Hellevator"):
+        print(soup2["nome"])
+
+      elif(self.nome=="Chronosaurus"):
+        print(soup3["nome"])
+          
+      elif(self.nome=="WOW"):
+        print(soup4["nome"])
 
 
 class Legumes(Sopa):
@@ -68,6 +109,7 @@ class Carne(Sopa):
     def verificar_disponibilidade(self):
         print(self.nome, "Esse prato está disponível")
 
+#opc=input("Qual sopa da casa você deseja?")
 
 soup1=dict()
 soup1= {'nome':'Matryoshka', 'preço': 15, 'sabor': 'caldo de frango', 'acompanhamento': 'batata','tparroz': 'arroz branco', 'tpcarne': 'carne de frango'}
@@ -81,3 +123,14 @@ soup3 = {'nome':'Chronosaurus', 'preço': 18, 'sabor': 'legumes ao molho de feij
 soup4=dict()
 soup4 = {'nome':'WOW', 'preço': 16, 'sabor': 'Legumes variados', 'acompanhamento': 'bacon e croutons', 'tpnoodle':'macarrão parafuso', 'tpverdura':'repolho'}
 
+"""if opc == soup1["nome"]:
+  print(soup1) 
+
+elif opc == soup2["nome"]: 
+  print(soup2)
+
+elif opc == soup3["nome"]: 
+  print(soup3)
+
+elif opc == soup4["nome"]: 
+  print(soup4)"""
