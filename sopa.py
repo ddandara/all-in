@@ -1,7 +1,7 @@
 class Sopa:
 
     def __init__(self, nn=None, preco=None, sabor=None, acompanhamento=None):
-        self.nome=input("Qual sopa da casa você deseja?")
+        self.nome=input("Qual sopa da casa você deseja? ")
         self.nn = nn
         self.preco = preco
         self.sabor = sabor

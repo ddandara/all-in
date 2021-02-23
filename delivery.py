@@ -22,7 +22,7 @@ class Delivery:
       print(self.sopas)
 
 
-deli = Delivery ('GODS MENU SOPARIA - Contato:40028922', 'Unidades: Av Calama e Zona Sul', 'Entrega em domicílio e take out', 'Sopas Variadas', 'Entrega em todas as zonas', 'Sopas: Matryoshka, Hellevator, Chronosaurus e WOW-------------------------------------------------------------')
+deli = Delivery ('GODS MENU SOPARIA - Contato:40028922', 'Unidades: Av Calama e Zona Sul', 'Entrega em domicílio e take out', 'Sopas Variadas', 'Entrega em todas as zonas', 'Sopas: Matryoshka, Hellevator, Chronosaurus e WOW-------------------------------------------------------------------------------')
 deli.mostrar_contato()
 deli.mostrar_unidades()
 deli.mostrar_servicos()

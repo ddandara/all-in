@@ -9,8 +9,9 @@ O uso de coleções de dados para gerenciar os itens da compra e a ordem dos ped
 utilize a coleção de dados apropriada para armazenar os objetos: Lista, fila, pilha, dicionário entre outras."""""
 
 #Discente: Denise Dandara Gomes de Carvalho Severo.
+#Docente: Camila Serrão
 #2º ano de Informática Matutino.
-#Programação Orientada a Objetos
+#Programação Orientada a Objetos 
 
 from delivery import*
 from perfil import*
