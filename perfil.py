@@ -7,6 +7,7 @@ class Perfil:
         self.email=input("Digite um endereço de email válido: ")
         self.senha=input("Crie uma senha de no mínimo 8 caracteres, com ao menos uma letra e um número: ")
         
+        
         """self.cpf=input("digite seu cpf:")
         if self.cpf==str:
           raise Exception("Apenas números são permitidos")"""

@@ -7,7 +7,8 @@ class Sopa:
         self.sabor = sabor
         self.acompanhamento = acompanhamento
 
-    
+  #consertei a classe sopa
+   
     def mostrar_sopa(self):
         if(self.nome=="Matryoshka"):
           print(soup1)
@@ -109,8 +110,6 @@ class Carne(Sopa):
     def verificar_disponibilidade(self):
         print(self.nome, "Esse prato está disponível")
 
-#opc=input("Qual sopa da casa você deseja?")
-
 soup1=dict()
 soup1= {'nome':'Matryoshka', 'preço': 15, 'sabor': 'caldo de frango', 'acompanhamento': 'batata','tparroz': 'arroz branco', 'tpcarne': 'carne de frango'}
 
@@ -123,14 +122,4 @@ soup3 = {'nome':'Chronosaurus', 'preço': 18, 'sabor': 'legumes ao molho de feij
 soup4=dict()
 soup4 = {'nome':'WOW', 'preço': 16, 'sabor': 'Legumes variados', 'acompanhamento': 'bacon e croutons', 'tpnoodle':'macarrão parafuso', 'tpverdura':'repolho'}
 
-"""if opc == soup1["nome"]:
-  print(soup1) 
 
-elif opc == soup2["nome"]: 
-  print(soup2)
-
-elif opc == soup3["nome"]: 
-  print(soup3)
-
-elif opc == soup4["nome"]: 
-  print(soup4)"""
